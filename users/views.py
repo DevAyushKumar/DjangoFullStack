@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.contrib import messages
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm,UserUpdateForms,ProfileUpdateForms
 from django.contrib.auth.decorators import login_required
 
 def register(request):
@@ -10,7 +10,7 @@ def register(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}!')
-            return redirect('blog-home')
+            return redirect('login')
         
     else:
         form = UserRegisterForm()
@@ -24,4 +24,11 @@ def logout(response):
 
 @login_required
 def profile(response):
-    return render(response, 'users/profile.html')
+    u_form = UserUpdateForms()
+    p_form = ProfileUpdateForms()
+
+    context = {
+        'u_form' : u_form,
+        'p_form' : p_form
+    }
+    return render(response, 'users/profile.html', context)

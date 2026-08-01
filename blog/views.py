@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from .models import posts
+from .models import post
 
 def home(response):
     context = {
-        'posts' : posts.objects.all()
+        'post' : post.objects.all()
     }
     return render(response, 'blog/home.html',context,)
 

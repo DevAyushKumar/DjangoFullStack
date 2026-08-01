@@ -17,3 +17,6 @@ def register(request):
 
 def login(response):
     return render(response, 'users/login.html')
+
+def logout(response):
+    return render(response, 'users/logout.html')

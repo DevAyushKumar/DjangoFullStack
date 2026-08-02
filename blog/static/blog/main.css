@@ -82,9 +82,3 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
-
-.link-container {
-  display: flex;         
-  gap: 15px;           
-  justify-content: center; 
-}

@@ -36,17 +36,15 @@
   <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
   <a class="nav-item nav-link" href="{% url 'post-create' %}">Create Post</a>
           {% else %}
-          <div class="LoginAndRegister">
           <a class="nav-item nav-link" href="{% url 'login' %}">Login</a> 
           <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
-          </div>
           {% endif %}
         </div>
       </div>
     </div>
   </nav>
 </header>
-<main role="main" class="container">
+<main role="main" class="container mt-5">
   <div class="row">
     <div class="col-md-8">
       {% if messages %}

@@ -34,9 +34,12 @@
     <button type="submit" class="nav-item nav-link btn btn-link" style="border:none;background:none;">Logout</button>
   </form>
   <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+  <a class="nav-item nav-link" href="{% url 'post-create' %}">Create Post</a>
           {% else %}
-          <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+          <div class="LoginAndRegister">
+          <a class="nav-item nav-link" href="{% url 'login' %}">Login</a> 
           <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+          </div>
           {% endif %}
         </div>
       </div>

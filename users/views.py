@@ -23,12 +23,21 @@ def logout(response):
     return render(response, 'users/logout.html')
 
 @login_required
-def profile(response):
-    u_form = UserUpdateForms()
-    p_form = ProfileUpdateForms()
+def profile(request):
+    if request.method == 'POST':
+        u_form = UserUpdateForms(request.POST, instance=request.user)
+        p_form = ProfileUpdateForms(request.POST, request.FILES, instance=request.user.profile)
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, f'Account has been updated!')
+            return redirect('profile')
+    else:
+        u_form = UserUpdateForms(instance=request.user)
+        p_form = ProfileUpdateForms(instance=request.user.profile)
 
     context = {
         'u_form' : u_form,
         'p_form' : p_form
     }
-    return render(response, 'users/profile.html', context)
+    return render(request, 'users/profile.html', context)

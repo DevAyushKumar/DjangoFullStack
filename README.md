@@ -151,10 +151,6 @@ Visit `http://127.0.0.1:8000` in your browser.
 | `EMAIL_HOST_USER` | Gmail address used to send password-reset emails |
 | `EMAIL_HOST_PASSWORD` | Gmail app password |
 
-## Credits
-
-Built by following [Corey Schafer's Django Tutorial Series](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH), with a MySQL setup and Railway deployment configuration.
-
 ## License
 
 This project is for educational purposes.

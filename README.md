@@ -1,6 +1,6 @@
 # DjangoFullStack — Blog Web App
 
-A full-stack blog application built with **Django**, based on Corey Schafer's Django tutorial series. Users can register, log in, manage their profile (with picture upload), and create/read/update/delete blog posts. Password reset is handled via email. Deployed on **Railway** with a **MySQL** database.
+A full-stack blog application built with **Django**. Users can register, log in, manage their profile (with picture upload), and create/read/update/delete blog posts. Password reset is handled via email. Deployed on **Railway** with a **MySQL** database.
 
 ## Features
 
